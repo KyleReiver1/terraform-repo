@@ -1,11 +1,11 @@
 resource "aws_instance" "example" {
-  ami           = "ami-068c0051b15cdb816"
-  instance_type = "t3.micro"
-
+  ami           = var.kyle-ami
+  instance_type = var.vm-size
+  count = var.novm
   vpc_security_group_ids = [ aws_security_group.allow_tls.id ]
   
   tags = {
-    "Name" = "kyle-vm1"
+    Name = "${var.vm-name}-${count.index}"
   }
 }
 
