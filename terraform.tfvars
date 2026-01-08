@@ -1,2 +1,2 @@
 vm-size = "t2.small"
-vm-name = "ashu-vm001"
+vm-name = "ashu-vm-day3"

@@ -8,12 +8,12 @@ terraform {
   }
   # terraform tfstate file remote backend section 
   backend "s3" {
-    bucket = "kyle-jan26-terraform"
-    key = "dev/kyle/terraform.tfstate"
-    encrypt = true
-    region = "us-east-1"
+    bucket         = "kyle-jan26-terraform"
+    key            = "dev/kyle/terraform.tfstate"
+    encrypt        = true
+    region         = "us-east-1"
     dynamodb_table = "kyle-table"
-    
+
   }
 }
 
